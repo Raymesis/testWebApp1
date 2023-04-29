@@ -14,7 +14,7 @@ namespace WebApplication1.Database
             string connetionString;
             connetionString = @"Data Source=DESKTOP-2FCEFTS;Initial Catalog=DivarClone;Integrated Security=True";
             cnn = new SqlConnection(connetionString);
-            cnn.Open();
+           
         }
         private static readonly Lazy<Db> lazy = new Lazy<Db>(() => new Db());
         public static Db Instance

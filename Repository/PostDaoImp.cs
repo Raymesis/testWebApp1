@@ -21,9 +21,11 @@ namespace WebApplication1.Repository
 
             SqlCommand command;
             SqlDataReader dataReader;
-            String sql, Output = "";
+            String sql = "";
 
             sql = "select name,title from post";
+
+            Db.Instance.cnn.Open();
 
             command = new SqlCommand(sql, Db.Instance.cnn);
 
@@ -33,7 +35,7 @@ namespace WebApplication1.Repository
             {
                 posts.Add(new PostModel(dataReader.GetString(0), dataReader.GetString(1)));
             }
-
+            Db.Instance.cnn.Close();
             return posts;
         }
     }
