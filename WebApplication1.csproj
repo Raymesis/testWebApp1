@@ -86,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\test_image.png" />
-    <Content Include="UI\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,17 +94,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IPostDao.cs" />
     <Compile Include="Repository\PostDaoImp.cs" />
-    <Compile Include="UI\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="UI\WebPage1.cshtml" />
+    <Content Include="UI\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -20,23 +20,48 @@ namespace WebApplication1.Repository
             List<PostModel> posts = new List<PostModel>();
 
             SqlCommand command;
-            SqlDataReader dataReader;
+            SqlDataReader reader;
             String sql = "";
 
-            sql = "select name,title from post";
+            sql = "select * from Posts";
 
             Db.Instance.cnn.Open();
 
             command = new SqlCommand(sql, Db.Instance.cnn);
 
-            dataReader = command.ExecuteReader();
+            reader = command.ExecuteReader();
 
-            while (dataReader.Read())
+            while (reader.Read())
             {
-                posts.Add(new PostModel(dataReader.GetString(0), dataReader.GetString(1)));
+                posts.Add(
+                   new PostModel(reader.GetInt32(0),
+                    reader.GetInt32(1),
+                    reader.GetInt32(2),
+                    reader.GetString(3),
+                    reader.GetString(4),
+                    reader.GetInt32(5),
+                    reader.GetString(6),             
+                    reader.GetString(7),
+                    reader.GetString(8),
+                    reader.GetDateTime(9),
+                    reader.GetBoolean(10))
+                );
+
             }
             Db.Instance.cnn.Close();
             return posts;
         }
     }
 }
+/*posts.Add(
+  new PostModel(reader["id"],
+   reader["daste_id"],
+   reader["user_id"],
+   reader["gheimat"],
+   reader["onvan"],
+   reader["tozihat"],
+   reader["vaziat_forosh"],
+   reader["img"],
+   reader["shomare_tamas"],
+   reader["tarikh_sabt"],
+   reader["is_active"]));*/

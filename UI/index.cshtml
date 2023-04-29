@@ -1,11 +1,12 @@
-﻿@using WebApplication1.Repository;
+﻿
+@using WebApplication1.Repository;
 @using WebApplication1.Model;
-@{ 
+@{
     List<PostModel> posts = new PostDaoImp().getPosts();
-
 }
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,18 +20,17 @@
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
             width: 30%;
-            
             border-radius: 5px;
         }
 
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
 
         .post_img {
             border-radius: 5px 5px 0 0;
             width: 100px;
-            height:100px;
+            height: 100px;
             float: left;
             object-fit: cover
         }
@@ -50,10 +50,10 @@
             padding: 10px;
             margin: 10px;
         }
-        .post_desc{
-            color:darkgray;
-            font-size:14px;
 
+        .post_desc {
+            color: darkgray;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -66,17 +66,18 @@
         @foreach (PostModel row in posts)
         {
 
-            <div class="column card">
-                <img class="post_img" src="~/images/test_image.png" alt="Avatar" >
+            <div class="column card" >
+                <img class="post_img" src="~/images/test_image.png" alt="Avatar">
                 <div class="container">
-                    <h4><b>@row.name</b> </h4>
-                    <p class="post_desc">@row.title</p>               
-                    <p class="post_desc">5000000 تومان</p>
-                    <p class="post_desc">دقایقی پیش</p>
+                    <h4><b>@row.onvan</b> </h4>
+                    <p class="post_desc">@row.vaziat_forosh</p>
+                    <p class="post_desc">@row.gheimat</p>
+                    <p class="post_desc">@row.tarikht_sabt</p>
                 </div>
             </div>
         }
     </div>
+
 </body>
 
 </html>
