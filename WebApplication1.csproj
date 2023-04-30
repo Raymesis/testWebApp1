@@ -78,6 +78,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebApplication1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\WebApplication1.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -86,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\test_image.png" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="UI\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -106,6 +111,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="UI\WebPage1.cshtml" />
+    <Content Include="UI\WebPage2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UseCase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

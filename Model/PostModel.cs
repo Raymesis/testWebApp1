@@ -8,9 +8,9 @@ namespace WebApplication1.Model
     public class PostModel
     {
     public string name;
-    public string title;
+    public double title;
 
-    public PostModel(string name, string title)
+    public PostModel(string name, double title)
     {
             this.name = name;
             this.title = title;

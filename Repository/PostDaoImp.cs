@@ -23,7 +23,7 @@ namespace WebApplication1.Repository
             SqlDataReader dataReader;
             String sql = "";
 
-            sql = "select name,title from post";
+            sql = "select onvan,gheimat from Post";
 
             Db.Instance.cnn.Open();
 
@@ -33,7 +33,7 @@ namespace WebApplication1.Repository
 
             while (dataReader.Read())
             {
-                posts.Add(new PostModel(dataReader.GetString(0), dataReader.GetString(1)));
+                posts.Add(new PostModel(dataReader.GetString(0), dataReader.GetDouble(1)));
             }
             Db.Instance.cnn.Close();
             return posts;
